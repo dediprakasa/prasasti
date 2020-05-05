@@ -38,6 +38,13 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
 
+.previewCoverImage {
+  height: 270px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
 .meta {
   font-size: 1rem;
   margin-bottom: 30px;

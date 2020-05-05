@@ -38,6 +38,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               path={path}
               author={author}
               coverImage={coverImage}
+              previewCoverImage
               tags={tags}
               excerpt={excerpt || autoExcerpt}
             />

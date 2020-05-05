@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          tagline
           logo {
             src
             alt
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
   `)
   const {
     title,
+    tagline,
     logo,
     logoText,
     defaultTheme,
@@ -47,6 +49,7 @@ const Layout = ({ children }) => {
         siteTitle={title}
         siteLogo={logo}
         logoText={logoText}
+        taglineText={tagline}
         defaultTheme={defaultTheme}
         mainMenu={mainMenu}
         mainMenuItems={showMenuItems}

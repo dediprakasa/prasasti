@@ -12,6 +12,7 @@ const Post = ({
   date,
   path,
   coverImage,
+  previewCoverImage,
   author,
   excerpt,
   tags,
@@ -44,10 +45,17 @@ const Post = ({
         </div>
 
         {coverImage && (
-          <Img
-            fluid={coverImage.childImageSharp.fluid}
-            className={style.coverImage}
-          />
+          previewCoverImage ? (
+            <Img
+              fluid={coverImage.childImageSharp.fluid}
+              className={style.previewCoverImage}
+            />
+          ) : (
+            <Img
+              fluid={coverImage.childImageSharp.fluid}
+              className={style.coverImage}
+            />
+          )
         )}
 
         {excerpt ? (

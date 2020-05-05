@@ -11,6 +11,7 @@ const Header = props => {
   const {
     siteLogo,
     logoText,
+    taglineText,
     mainMenu,
     mainMenuItems,
     menuMoreText,
@@ -53,9 +54,12 @@ const Header = props => {
                 <img src={siteLogo.src} alt={siteLogo.alt} />
               ) : (
                 <>
-                  <span className={style.mark}>></span>
                   <span className={style.text}>{logoText}</span>
-                  <span className={style.cursor} />
+                  <div>
+                    <span className={style.subtext}>{taglineText}</span>
+                    <span className={style.cursor}>|</span>
+                  </div>
+                  
                 </>
               )}
             </div>
@@ -81,6 +85,7 @@ const Header = props => {
 Header.propTypes = {
   siteLogo: PropTypes.object,
   logoText: PropTypes.string,
+  taglineText: PropTypes.string,
   defaultTheme: PropTypes.string,
   mainMenu: PropTypes.arrayOf(
     PropTypes.shape({
